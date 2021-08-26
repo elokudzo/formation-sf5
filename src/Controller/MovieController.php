@@ -21,8 +21,8 @@ class MovieController extends AbstractController
 
     private $omdb;
 
-    public function __construct(HttpClientInterface $httpClient){
-        $this->omdb = new OmdbClient($httpClient, '28c5b7b1','https://www.omdbapi.com');
+    public function __construct(OmdbClient $omdb){
+        $this->omdb = $omdb;
     }
 
 
